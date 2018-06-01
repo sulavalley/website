@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.0.3",
-    "firebase-tools": "^3.18.5",
     "re-base": "^3.2.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -28,6 +27,7 @@
     "jest-enzyme": "^6.0.0",
     "prettier": "1.12.1",
     "pretty-quick": "^1.5.1",
-    "react-test-renderer": "^16.4.0"
+    "react-test-renderer": "^16.4.0",
+    "firebase-tools": "^3.18.5"
   }
 }
