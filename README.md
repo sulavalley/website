@@ -27,6 +27,8 @@ With yarn:
 yarn install
 ```
 
+## Install semantic
+
 ## Install Firebase CLI
 
 Install firebase-tools globally.
