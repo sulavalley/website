@@ -6,7 +6,8 @@ exports[`renders correctly 1`] = `
     className="ui header-size menu"
   >
     <img
-      src="https://trello-attachments.s3.amazonaws.com/5aff552929693747ec0b088d/5aff5c23f3cddefc5870f975/9641415fc09e4d3aa2b1d3fd734b9541/logo.png"
+      alt="logo"
+      src="logo.png"
     />
     <div
       className="right menu"
