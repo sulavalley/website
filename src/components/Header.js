@@ -1,10 +1,10 @@
 import React from 'react';
-import './Header.css';
+import './../css/Header.css';
 
 const Header = () => {
   return (
     <div className="ui header-size menu">
-      <img src={require('./logo.png')} alt="logo" />
+      <img src={require('./../logo.png')} alt="logo" />
       <div className="right menu">
         <a className="item" href="/institucionalidad">
           Institucionalidad

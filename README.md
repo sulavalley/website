@@ -27,7 +27,12 @@ With yarn:
 yarn install
 ```
 
-## Install semantic
+## Install Semantic
+
+```
+cd semantic/
+gulp build
+```
 
 ## Install Firebase CLI
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import Multimedia from './../pages/Multimedia';
+import Multimedia from './../components/pages/Multimedia';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

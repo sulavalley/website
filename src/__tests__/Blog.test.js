@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import Blog from './../pages/Blog';
+import Blog from './../components/pages/Blog';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
