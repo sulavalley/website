@@ -4,7 +4,7 @@ import './../css/Header.css';
 const Header = () => {
   return (
     <div className="ui header-size menu">
-      <img src={require('./../logo.png')} alt="logo" />
+      <img src={require('./../assets/images/logo.png')} alt="logo" />
       <div className="right menu">
         <a className="item" href="/institucionalidad">
           Institucionalidad
