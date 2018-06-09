@@ -3,59 +3,66 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    className="ui header-size menu"
+    className="app-header"
   >
-    <img
-      alt="logo"
-      src="logo.png"
-    />
     <div
-      className="right menu"
+      className="ui header-size menu"
     >
-      <a
-        className="item"
-        href="/institucionalidad"
+      <img
+        alt="logo"
+        src="logo.png"
+      />
+      <div
+        className="right menu"
       >
-        Institucionalidad
-      </a>
-      <a
-        className="item"
-        href="/municipios"
-      >
-        Municipios
-      </a>
-      <a
-        className="item"
-        href="/multimedia"
-      >
-        Multimedia
-      </a>
-      <a
-        className="item"
-        href="/sostenibilidad"
-      >
-        Sostenibilidad
-      </a>
-      <a
-        className="item"
-        href="/festividades"
-      >
-        Festividades
-      </a>
-      <a
-        className="item"
-        href="/actividades"
-      >
-        Actividades
-      </a>
-      <a
-        className="item"
-        href="/blog"
-      >
-        Blog
-      </a>
+        <a
+          className="item"
+          href="/institucionalidad"
+        >
+          Institucionalidad
+        </a>
+        <a
+          className="item"
+          href="/municipios"
+        >
+          Municipios
+        </a>
+        <a
+          className="item"
+          href="/multimedia"
+        >
+          Multimedia
+        </a>
+        <a
+          className="item"
+          href="/sostenibilidad"
+        >
+          Sostenibilidad
+        </a>
+        <a
+          className="item"
+          href="/festividades"
+        >
+          Festividades
+        </a>
+        <a
+          className="item"
+          href="/actividades"
+        >
+          Actividades
+        </a>
+        <a
+          className="item"
+          href="/blog"
+        >
+          Blog
+        </a>
+      </div>
     </div>
   </div>
+  <div
+    className="app-page-body"
+  />
   <div
     className="footer"
   >

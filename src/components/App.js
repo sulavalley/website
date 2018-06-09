@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Grid } from 'semantic-ui-react';
 import Header from './Header';
 import Footer from './Footer';
 import Activities from './pages/Activities';
