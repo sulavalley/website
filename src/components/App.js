@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'semantic-ui/dist/semantic.min.css';
+import 'semantic-ui-css/semantic.min.css';
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
