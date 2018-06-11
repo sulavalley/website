@@ -1,31 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="App"
->
-  <header
-    className="App-header"
+<div>
+  <div
+    className="app-header"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <h1
-      className="App-title"
+    <div
+      className="ui header-size menu"
     >
-      Welcome to React
-    </h1>
-  </header>
-  <p
-    className="App-intro"
+      <img
+        alt="logo"
+        src="logo.png"
+      />
+      <div
+        className="right menu"
+      >
+        <a
+          className="item"
+          href="/institucionalidad"
+        >
+          Institucionalidad
+        </a>
+        <a
+          className="item"
+          href="/municipios"
+        >
+          Municipios
+        </a>
+        <a
+          className="item"
+          href="/multimedia"
+        >
+          Multimedia
+        </a>
+        <a
+          className="item"
+          href="/sostenibilidad"
+        >
+          Sostenibilidad
+        </a>
+        <a
+          className="item"
+          href="/festividades"
+        >
+          Festividades
+        </a>
+        <a
+          className="item"
+          href="/actividades"
+        >
+          Actividades
+        </a>
+        <a
+          className="item"
+          href="/blog"
+        >
+          Blog
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="app-page-body"
+  />
+  <div
+    className="footer"
   >
-    To get started, edit 
-    <code>
-      src/App.js
-    </code>
-     and save to reload.
-  </p>
+    <div
+      className="margin-info"
+    >
+      <h4>
+        © Copyright 2017 | All rights reserved
+      </h4>
+    </div>
+  </div>
 </div>
 `;

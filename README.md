@@ -27,6 +27,13 @@ With yarn:
 yarn install
 ```
 
+## Install Semantic
+
+```
+cd semantic/
+gulp build
+```
+
 ## Install Firebase CLI
 
 Install firebase-tools globally.

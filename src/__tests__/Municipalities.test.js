@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import App from './../components/App';
+import Municipalities from './../components/pages/Municipalities';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<Municipalities />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
 it('renders without crashing', () => {
-  shallow(<App />);
+  shallow(<Municipalities />);
 });
 
 test('renders correctly', () => {
-  const tree = renderer.create(<App />).toJSON();
+  const tree = renderer.create(<Municipalities />).toJSON();
   expect(tree).toMatchSnapshot();
 });

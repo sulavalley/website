@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ui header-size menu"
+>
+  <img
+    alt="logo"
+    src="logo.png"
+  />
+  <div
+    className="right menu"
+  >
+    <a
+      className="item"
+      href="/institucionalidad"
+    >
+      Institucionalidad
+    </a>
+    <a
+      className="item"
+      href="/municipios"
+    >
+      Municipios
+    </a>
+    <a
+      className="item"
+      href="/multimedia"
+    >
+      Multimedia
+    </a>
+    <a
+      className="item"
+      href="/sostenibilidad"
+    >
+      Sostenibilidad
+    </a>
+    <a
+      className="item"
+      href="/festividades"
+    >
+      Festividades
+    </a>
+    <a
+      className="item"
+      href="/actividades"
+    >
+      Actividades
+    </a>
+    <a
+      className="item"
+      href="/blog"
+    >
+      Blog
+    </a>
+  </div>
+</div>
+`;
