@@ -1,9 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <h1>
-    Estas en Multimedia
-  </h1>
-</div>
+<center>
+  <div
+    className="video-player"
+  >
+    <div
+      className="ui embed"
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden="true"
+        className="video play icon"
+      />
+      <img
+        className="placeholder"
+        src="https://trello-attachments.s3.amazonaws.com/5aff552929693747ec0b088d/5aff5c23f3cddefc5870f975/34b908e23ae35dd9a286309203978edd/logo_MRT-VS-HD.png"
+      />
+    </div>
+  </div>
+</center>
 `;
