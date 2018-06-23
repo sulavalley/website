@@ -2,8 +2,79 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <h1>
-    Estas en Sostenibilidad
-  </h1>
+  <div
+    className="ui attached tabular menu"
+  >
+    <a
+      className="active item"
+      onClick={[Function]}
+    >
+      Crear Proyecto
+    </a>
+    <a
+      className="item"
+      onClick={[Function]}
+    >
+      Proyectos
+    </a>
+  </div>
+  <form
+    action={undefined}
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <br />
+    <div
+      className="field"
+    >
+      <label>
+        Nombre del Proyecto
+      </label>
+      <input
+        onChange={[Function]}
+        placeholder="Nombre del proyecto"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="field"
+    >
+      <label>
+        Imagen
+      </label>
+      <input
+        onChange={[Function]}
+        placeholder="Enlace de la Imagen"
+        type="url"
+        value=""
+      />
+    </div>
+    <div
+      className="field"
+    >
+      <label>
+        Descripcion
+      </label>
+      <input
+        onChange={[Function]}
+        placeholder="Descripcion del Proyecto"
+        type="text"
+        value=""
+      />
+       
+    </div>
+    <button
+      className="ui button"
+      disabled={undefined}
+      id="myButton"
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+      type="submit"
+    >
+      Crear
+    </button>
+  </form>
 </div>
 `;

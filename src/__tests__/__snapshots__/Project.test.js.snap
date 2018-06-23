@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ui card"
+  href={undefined}
+  onClick={[Function]}
+>
+  <img
+    className="ui medium image"
+    src={undefined}
+  />
+  <div
+    className="content"
+  >
+    <div
+      className="header"
+    />
+    <div
+      className="description"
+    />
+  </div>
+</div>
+`;
