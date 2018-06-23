@@ -1,23 +1,30 @@
 import React from 'react';
-import base from 'base';
-import map from 'lodash/map';
+import base from '../../base';
 import Project from './Project';
 
 class Projects extends React.Component {
-  getProjects() {
-    base.fetch('projects', {
+
+  state = {
+    projects: []
+  }
+
+componentDidMount (){
+  base.fetch('projects', {
       context: this,
       asArray: true,
       then(data) {
-        console.log(data);
+        this.setState({projects: data})
       }
     });
-  }
-
+}
   render() {
-    const { projects } = this.getProjects;
 
-    return <Project />;
+    return (
+      <div>
+        {this.state.projects.map((project,i) => (<Project name= {project.name} 
+          url= {project.url} description= {project.description} key={i}/>))}
+      </div>
+    )
   }
 }
 
