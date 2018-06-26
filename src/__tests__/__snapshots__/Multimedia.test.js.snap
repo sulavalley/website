@@ -2,21 +2,92 @@
 
 exports[`renders correctly 1`] = `
 <center>
-  <div
-    className="video-player"
-  >
+  <div>
     <div
-      className="ui embed"
-      onClick={[Function]}
+      className="ui attached tabular menu"
     >
-      <i
-        aria-hidden="true"
-        className="video play icon"
-      />
-      <img
-        className="placeholder"
-        src="https://trello-attachments.s3.amazonaws.com/5aff552929693747ec0b088d/5aff5c23f3cddefc5870f975/34b908e23ae35dd9a286309203978edd/logo_MRT-VS-HD.png"
-      />
+      <a
+        className="active item"
+        onClick={[Function]}
+      >
+        Imágenes
+      </a>
+      <a
+        className="item"
+        onClick={[Function]}
+      >
+        Vídeos
+      </a>
+    </div>
+    <div
+      className="ui bottom attached segment active tab"
+    >
+      <div
+        className="image-gallery"
+      >
+        <form
+          action={undefined}
+          className="ui form"
+          onSubmit={[Function]}
+        >
+          <br />
+          <div
+            className="field"
+          >
+            <label>
+              Nombre de la imagen
+            </label>
+            <input
+              onChange={[Function]}
+              placeholder="Nombre de la imagen"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="field"
+          >
+            <label>
+              Imagen
+            </label>
+            <input
+              onChange={[Function]}
+              placeholder="Enlace de la imagen"
+              type="url"
+              value=""
+            />
+          </div>
+          <button
+            className="ui button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+            type="submit"
+          >
+            Crear
+          </button>
+        </form>
+        <div
+          className="ReactGridGallery"
+          id="ReactGridGallery"
+        >
+          <iframe
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+                "height": 0,
+                "margin": 0,
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
     </div>
   </div>
 </center>
