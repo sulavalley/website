@@ -5,10 +5,20 @@ exports[`renders correctly 1`] = `
   className="ui card"
   href={undefined}
   onClick={[Function]}
+  style={
+    Object {
+      "minHeight": "100%",
+    }
+  }
 >
   <img
     className="ui medium image"
     src={undefined}
+    style={
+      Object {
+        "marginLeft": "0%",
+      }
+    }
   />
   <div
     className="content"
