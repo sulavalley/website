@@ -1,12 +1,12 @@
 import React from 'react';
 import { auth } from '../base';
-import { Button } from 'semantic-ui-react';
+import './../css/Header.css';
 
 const CurrentUser = ({ user }) => {
   return (
-    <div className="CurrentUser">
-      <Button onClick={() => auth.signOut()}>Salir</Button>
-    </div>
+    <a className="item" onClick={() => auth.signOut()}>
+      Salir
+    </a>
   );
 };
 
