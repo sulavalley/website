@@ -57,6 +57,12 @@ exports[`renders correctly 1`] = `
         >
           Blog
         </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Iniciar Sesión
+        </a>
       </div>
     </div>
   </div>
