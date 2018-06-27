@@ -1,11 +1,19 @@
 import React from 'react';
+import { Tab } from 'semantic-ui-react';
+import NewProject from './NewProject';
+import Projects from './Projects';
 
-const Sustainability = () => {
-  return (
-    <div>
-      <h1>Estas en Sostenibilidad</h1>
-    </div>
-  );
-};
+const panes = [
+  {
+    menuItem: 'Crear Proyecto',
+    render: () => <NewProject />
+  },
+  {
+    menuItem: 'Proyectos',
+    render: () => <Projects />
+  }
+];
 
-export default Sustainability;
+const TabExampleBasic = () => <Tab panes={panes} />;
+
+export default TabExampleBasic;
