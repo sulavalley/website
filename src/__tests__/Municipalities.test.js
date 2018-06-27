@@ -13,8 +13,3 @@ it('renders without crashing', () => {
 it('renders without crashing', () => {
   shallow(<Municipalities />);
 });
-
-test('renders correctly', () => {
-  const tree = renderer.create(<Municipalities />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
