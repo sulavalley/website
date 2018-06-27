@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="video-player"
+>
+  <div
+    className="ui embed"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="video play icon"
+    />
+    <img
+      className="placeholder"
+      src="logo.png"
+    />
+  </div>
+</div>
+`;
