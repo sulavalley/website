@@ -1,6 +1,6 @@
 import Rebase from 're-base';
 import firebase from 'firebase';
-import { FirebaseConfig } from './config/keys';
+import { FirebaseConfig } from './config/dev';
 
 const firebaseApp = firebase.initializeApp(FirebaseConfig);
 
