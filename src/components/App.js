@@ -11,15 +11,29 @@ import Multimedia from './pages/Multimedia';
 import Municipalities from './pages/Municipalities';
 import Sustainability from './pages/Sustainability';
 import './../css/App.css';
+import { auth } from '../base';
+import SignIn from './SignIn';
+import CurrentUser from './CurrentUser';
 
 const FourOhFour = () => <h1>404</h1>;
 
 class App extends Component {
+  state = {
+    currentUser: null
+  };
+  componentDidMount() {
+    auth.onAuthStateChanged(currentUser => {
+      this.setState({ currentUser });
+    });
+  }
   render() {
+    const { currentUser } = this.state;
     return (
       <div>
         <div className="app-header">
           <Header />
+          {!currentUser && <SignIn />}
+          {currentUser && <CurrentUser user={currentUser} />}
         </div>
         <div className="app-page-body">
           <BrowserRouter>
