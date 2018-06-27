@@ -1,9 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <h1>
-    Estas en Institucionalidad
-  </h1>
+<div
+  className="ui items"
+>
+  <div
+    align="center"
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <h1>
+        Misión
+      </h1>
+      <div
+        className="description"
+        style={
+          Object {
+            "maxWidth": "50%",
+          }
+        }
+      >
+        <p>
+          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+        </p>
+      </div>
+    </div>
+    <div
+      className="image"
+    >
+      <img
+        className="ui image"
+        src="image3.jpg"
+      />
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="image"
+    >
+      <img
+        className="ui image"
+        src="image5.jpg"
+      />
+    </div>
+    <div
+      align="center"
+      className="content"
+    >
+      <h1>
+        Visión
+      </h1>
+      <div
+        className="description"
+        style={
+          Object {
+            "maxWidth": "50%",
+          }
+        }
+      >
+        <p>
+          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      align="center"
+      className="content"
+    >
+      <h1>
+        Objetivos
+      </h1>
+      <div
+        className="description"
+        style={
+          Object {
+            "maxWidth": "50%",
+          }
+        }
+      >
+        <p>
+          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+        </p>
+      </div>
+    </div>
+    <div
+      className="image"
+    >
+      <img
+        className="ui image"
+        src="image22.jpg"
+      />
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="image"
+    >
+      <img
+        className="ui image"
+        src="image28.jpg"
+      />
+    </div>
+    <div
+      align="center"
+      className="content"
+    >
+      <h1>
+        Alcance
+      </h1>
+      <div
+        className="description"
+        style={
+          Object {
+            "maxWidth": "50%",
+          }
+        }
+      >
+        <p>
+          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 `;
