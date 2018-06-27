@@ -5,20 +5,25 @@ import {
   Geographies,
   Geography
 } from 'react-simple-maps';
+import municipalites from '../../assets/municipalities.json';
 import map from '../../assets/maps/sula-valley.json';
 
-const wrapperStyles = {
-  width: '100%',
-  margin: '0 auto'
-};
-
 class SulaValleyMap extends Component {
+  onGeographyClick = geography => {
+    const { HASC_2 } = geography.properties;
+    const municipality = municipalites[HASC_2];
+    if (municipality === undefined) {
+      throw Error(`Municipality with HASC_2 '${HASC_2}' not found.`);
+    }
+    this.props.onMunicipalityClick(municipality);
+  };
+
   render() {
     return (
-      <div style={wrapperStyles}>
+      <div>
         <ComposableMap
           projection="mercator"
-          projectionConfig={{ scale: 23000 }}
+          projectionConfig={{ scale: 20000 }}
           style={{
             width: '100%',
             height: 'auto'
@@ -32,6 +37,7 @@ class SulaValleyMap extends Component {
                     key={geography.properties.GID_2}
                     geography={geography}
                     projection={projection}
+                    onClick={this.onGeographyClick}
                     style={{
                       default: {
                         fill: '#ECEFF1',
