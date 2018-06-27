@@ -1,23 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <div
-    className="ui attached tabular menu"
-  >
-    <a
-      className="active item"
-      onClick={[Function]}
-    >
-      Crear Proyecto
-    </a>
-    <a
-      className="item"
-      onClick={[Function]}
-    >
-      Proyectos
-    </a>
-  </div>
+<div
+  className="image-gallery"
+>
   <form
     action={undefined}
     className="ui form"
@@ -28,11 +14,11 @@ exports[`renders correctly 1`] = `
       className="field"
     >
       <label>
-        Nombre del Proyecto
+        Nombre de la imagen
       </label>
       <input
         onChange={[Function]}
-        placeholder="Nombre del proyecto"
+        placeholder="Nombre de la imagen"
         type="text"
         value=""
       />
@@ -45,29 +31,14 @@ exports[`renders correctly 1`] = `
       </label>
       <input
         onChange={[Function]}
-        placeholder="Enlace de la Imagen"
+        placeholder="Enlace de la imagen"
         type="url"
         value=""
       />
     </div>
-    <div
-      className="field"
-    >
-      <label>
-        Descripcion
-      </label>
-      <input
-        onChange={[Function]}
-        placeholder="Descripcion del Proyecto"
-        type="text"
-        value=""
-      />
-       
-    </div>
     <button
       className="ui button"
       disabled={undefined}
-      id="myButton"
       onClick={[Function]}
       role="button"
       tabIndex={undefined}
@@ -76,5 +47,24 @@ exports[`renders correctly 1`] = `
       Crear
     </button>
   </form>
+  <div
+    className="ReactGridGallery"
+    id="ReactGridGallery"
+  >
+    <iframe
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+          "height": 0,
+          "margin": 0,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "fixed",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
 </div>
 `;

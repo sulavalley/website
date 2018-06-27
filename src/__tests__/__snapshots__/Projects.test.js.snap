@@ -2,8 +2,8 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <h1>
-    Estas en Municipios
-  </h1>
+  <div
+    className="ui four column grid"
+  />
 </div>
 `;

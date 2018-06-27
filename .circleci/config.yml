@@ -21,7 +21,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
       - run: yarn test
 
   deploy-job:
@@ -32,11 +32,11 @@ jobs:
 
     steps:
       - checkout
-      
+
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
-          
+
           - v1-dependencies-
 
       - run: yarn install
@@ -45,7 +45,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-          
+
       - run: yarn build
       - run:
           name: Deploy Master to Firebase
@@ -61,4 +61,4 @@ workflows:
             - build
           filters:
             branches:
-              only: develop
+              only: master
