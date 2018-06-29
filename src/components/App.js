@@ -12,6 +12,7 @@ import Municipalities from './pages/Municipalities';
 import Sustainability from './pages/Sustainability';
 import { auth } from '../base';
 import './../css/App.css';
+import FullPost from './pages/Blog/FullPost';
 
 const FourOhFour = () => <h1>404</h1>;
 
@@ -44,9 +45,11 @@ class App extends Component {
               <Route path="/festividades" component={Festivities} />
               <Route path="/actividades" component={Activities} />
               <Route
+                exact
                 path="/blog"
                 render={() => <Blog currentUser={currentUser} />}
               />
+              <Route path="/blog/:id" component={FullPost} />
               <Route component={FourOhFour} />
             </Switch>
           </BrowserRouter>

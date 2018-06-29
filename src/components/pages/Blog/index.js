@@ -14,7 +14,7 @@ import firebase from 'firebase';
 
 class Blog extends Component {
   state = {
-    posts: [],
+    posts: {},
     postModalIsOpen: false,
     postTitle: '',
     postContent: ''
@@ -23,7 +23,6 @@ class Blog extends Component {
   componentDidMount() {
     base.fetch('posts', {
       context: this,
-      asArray: true,
       then(data) {
         this.setState({ posts: data });
       }
@@ -68,7 +67,11 @@ class Blog extends Component {
             Nueva publicación
           </Button>
         )}
-        <Item.Group>{posts.map(post => <Post {...post} />)}</Item.Group>
+        <Item.Group divided>
+          {Object.keys(posts).map(key => (
+            <Post key={key} id={key} {...posts[key]} />
+          ))}
+        </Item.Group>
         <PostModal
           open={postModalIsOpen}
           onClose={() => this.setState({ postModalIsOpen: false })}
