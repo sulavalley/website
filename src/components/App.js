@@ -10,16 +10,29 @@ import Institutionality from './pages/Institutionality';
 import Multimedia from './pages/Multimedia';
 import Municipalities from './pages/Municipalities';
 import Sustainability from './pages/Sustainability';
+import { auth } from '../base';
 import './../css/App.css';
+import FullPost from './pages/Blog/FullPost';
 
 const FourOhFour = () => <h1>404</h1>;
 
 class App extends Component {
+  state = {
+    currentUser: null
+  };
+
+  componentDidMount() {
+    auth.onAuthStateChanged(currentUser => {
+      this.setState({ currentUser });
+    });
+  }
+
   render() {
+    const { currentUser } = this.state;
     return (
       <div>
         <div className="app-header">
-          <Header />
+          <Header currentUser={currentUser} />
         </div>
         <div className="app-page-body">
           <BrowserRouter>
@@ -31,7 +44,12 @@ class App extends Component {
               <Route path="/sostenibilidad" component={Sustainability} />
               <Route path="/festividades" component={Festivities} />
               <Route path="/actividades" component={Activities} />
-              <Route path="/blog" component={Blog} />
+              <Route
+                exact
+                path="/blog"
+                render={() => <Blog currentUser={currentUser} />}
+              />
+              <Route path="/blog/:id" component={FullPost} />
               <Route component={FourOhFour} />
             </Switch>
           </BrowserRouter>

@@ -2,20 +2,11 @@ import React, { Component } from 'react';
 import './../css/Header.css';
 import logo from './../assets/images/logo.png';
 import SignIn from './SignIn';
-import { auth } from '../base';
 import CurrentUser from './CurrentUser';
 
 class Header extends Component {
-  state = {
-    currentUser: null
-  };
-  componentDidMount() {
-    auth.onAuthStateChanged(currentUser => {
-      this.setState({ currentUser });
-    });
-  }
   render() {
-    const { currentUser } = this.state;
+    const { currentUser } = this.props;
     return (
       <div className="ui header-size menu">
         <img src={logo} alt="logo" />
