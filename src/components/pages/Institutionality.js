@@ -1,94 +1,56 @@
 import React from 'react';
-import { Image } from 'semantic-ui-react';
+import { Item, Header } from 'semantic-ui-react';
 import image3 from './../../assets/images/image3.jpg';
 import image5 from './../../assets/images/image5.jpg';
 import image22 from './../../assets/images/image22.jpg';
 import image28 from './../../assets/images/image28.jpg';
 
+const loremIpsum =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
 const Institutionality = () => {
   return (
-    <div className="ui items">
-      <div className="item" align="center">
-        <div className="content">
-          <h1>Misión</h1>
-          <div className="description" style={{ maxWidth: '50%' }}>
-            <p>
-              Nulla aliquet elit non nulla pellentesque placerat sed malesuada
-              metus. Fusce ac odio et augue convallis consequat. Fusce
-              ullamcorper nulla vitae dui molestie tristique cursus suscipit
-              massa. Suspendisse pulvinar quam sed orci bibendum vestibulum.
-              Curabitur libero neque, interdum ornare mi et, auctor hendrerit
-              lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit.
-              In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus
-              felis, efficitur semper turpis imperdiet quis.
-            </p>
-          </div>
-        </div>
-        <div className="image">
-          <Image src={image3} />
-        </div>
-      </div>
-      <div className="item">
-        <div className="image">
-          <Image src={image5} />
-        </div>
-        <div className="content" align="center">
-          <h1>Visión</h1>
-          <div className="description" style={{ maxWidth: '50%' }}>
-            <p>
-              Nulla aliquet elit non nulla pellentesque placerat sed malesuada
-              metus. Fusce ac odio et augue convallis consequat. Fusce
-              ullamcorper nulla vitae dui molestie tristique cursus suscipit
-              massa. Suspendisse pulvinar quam sed orci bibendum vestibulum.
-              Curabitur libero neque, interdum ornare mi et, auctor hendrerit
-              lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit.
-              In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus
-              felis, efficitur semper turpis imperdiet quis.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="item">
-        <div className="content" align="center">
-          <h1>Objetivos</h1>
-          <div className="description" style={{ maxWidth: '50%' }}>
-            <p>
-              Nulla aliquet elit non nulla pellentesque placerat sed malesuada
-              metus. Fusce ac odio et augue convallis consequat. Fusce
-              ullamcorper nulla vitae dui molestie tristique cursus suscipit
-              massa. Suspendisse pulvinar quam sed orci bibendum vestibulum.
-              Curabitur libero neque, interdum ornare mi et, auctor hendrerit
-              lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit.
-              In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus
-              felis, efficitur semper turpis imperdiet quis.
-            </p>
-          </div>
-        </div>
-        <div className="image">
-          <Image src={image22} />
-        </div>
-      </div>
-      <div className="item">
-        <div className="image">
-          <Image src={image28} />
-        </div>
-        <div className="content" align="center">
-          <h1>Alcance</h1>
-          <div className="description" style={{ maxWidth: '50%' }}>
-            <p>
-              Nulla aliquet elit non nulla pellentesque placerat sed malesuada
-              metus. Fusce ac odio et augue convallis consequat. Fusce
-              ullamcorper nulla vitae dui molestie tristique cursus suscipit
-              massa. Suspendisse pulvinar quam sed orci bibendum vestibulum.
-              Curabitur libero neque, interdum ornare mi et, auctor hendrerit
-              lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit.
-              In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus
-              felis, efficitur semper turpis imperdiet quis.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Item.Group divided>
+      <Item>
+        <Item.Image size="medium" src={image3} />
+        <Item.Content>
+          <Header size="huge">Misión</Header>
+          <Item.Description>
+            <p>{loremIpsum}</p>
+          </Item.Description>
+        </Item.Content>
+      </Item>
+
+      <Item>
+        <Item.Image size="medium" src={image5} />
+        <Item.Content>
+          <Header size="huge">Visión</Header>
+          <Item.Description>
+            <p>{loremIpsum}</p>
+          </Item.Description>
+        </Item.Content>
+      </Item>
+
+      <Item>
+        <Item.Image size="medium" src={image22} />
+        <Item.Content>
+          <Header size="huge">Objetivos</Header>
+          <Item.Description>
+            <p>{loremIpsum}</p>
+          </Item.Description>
+        </Item.Content>
+      </Item>
+
+      <Item>
+        <Item.Image size="medium" src={image28} />
+        <Item.Content>
+          <Header size="huge">Alcance</Header>
+          <Item.Description>
+            <p>{loremIpsum}</p>
+          </Item.Description>
+        </Item.Content>
+      </Item>
+    </Item.Group>
   );
 };
 
