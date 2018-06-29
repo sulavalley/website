@@ -37,7 +37,7 @@ class App extends Component {
         <div className="app-page-body">
           <BrowserRouter>
             <Switch>
-              <Route exact path="/" />
+              <Route exact path="/" component={Institutionality} />
               <Route path="/institucionalidad" component={Institutionality} />
               <Route path="/municipios" component={Municipalities} />
               <Route path="/multimedia" component={Multimedia} />
