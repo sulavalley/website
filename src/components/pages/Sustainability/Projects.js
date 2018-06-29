@@ -1,6 +1,6 @@
 import React from 'react';
-import base from '../../base';
-import Project from './Project';
+import base from '../../../base';
+import Project from '../Sustainability/Project';
 import { Grid } from 'semantic-ui-react';
 
 class Projects extends React.Component {

@@ -7,8 +7,8 @@ import {
   Divider,
   Container
 } from 'semantic-ui-react';
-import SulaValleyMap from '../maps/SulaValleyMap';
-import municipalities from '../../assets/municipalities.json';
+import SulaValleyMap from './SulaValleyMap';
+import municipalities from '../../../assets/municipalities.json';
 
 const Municipality = ({ name, description, imgSrc }) => (
   <Segment.Group>

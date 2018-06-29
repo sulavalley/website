@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
-import VideoPlayer from '../VideoPlayer';
-import ImageGallery from '../ImageGallery';
+import VideoPlayer from './VideoPlayer';
+import ImageGallery from './ImageGallery';
 
 const panes = [
   {

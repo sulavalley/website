@@ -5,8 +5,8 @@ import {
   Geographies,
   Geography
 } from 'react-simple-maps';
-import municipalites from '../../assets/municipalities.json';
-import map from '../../assets/maps/sula-valley.json';
+import municipalites from '../../../assets/municipalities.json';
+import map from '../../../assets/maps/sula-valley.json';
 
 class SulaValleyMap extends Component {
   onGeographyClick = geography => {

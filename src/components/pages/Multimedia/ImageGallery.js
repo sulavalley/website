@@ -1,8 +1,8 @@
 import React from 'react';
 import Gallery from 'react-grid-gallery';
-import '../css/pages/Multimedia.css';
+import '../../../css/pages/Multimedia.css';
 import NewImage from './NewImage';
-import base from '../base';
+import base from '../../../base';
 
 class ImageGallery extends React.Component {
   state = {
