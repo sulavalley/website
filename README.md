@@ -1,6 +1,6 @@
 # Sula Valley Website
 
-![Sula Valley](https://trello-attachments.s3.amazonaws.com/5aff552929693747ec0b088d/5aff5c23f3cddefc5870f975/5044be6ec6d0b456185fbddee0034d6e/logo_MRT-VS.jpg)
+![Sula Valley](https://raw.githubusercontent.com/sulavalley/website/master/src/assets/images/logo.png)
 
 Website with information about the _Mesa Regional de Turismo del Valle de Sula_.
 
@@ -26,23 +26,6 @@ With yarn:
 ```
 yarn install
 ```
-
-## Install Semantic
-
-```
-cd semantic/
-gulp build
-```
-
-## Install Firebase CLI
-
-Install firebase-tools globally.
-
-```
-npm install -g firebase-tools
-```
-
-More information about Firebase CLI [here](https://firebase.google.com/docs/cli/).
 
 ## Run tests
 
@@ -70,4 +53,8 @@ With yarn:
 
 ```
 yarn start
+```
+
+```
+
 ```
