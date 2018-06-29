@@ -1,26 +1,51 @@
 import React, { Component } from 'react';
-import { Grid, Segment, Item } from 'semantic-ui-react';
+import {
+  Grid,
+  Segment,
+  Header,
+  Image,
+  Divider,
+  Container
+} from 'semantic-ui-react';
 import SulaValleyMap from '../maps/SulaValleyMap';
+import municipalities from '../../assets/municipalities.json';
 
 const Municipality = ({ name, description, imgSrc }) => (
-  <Segment>
-    <Item.Group>
-      <Item>
-        <Item.Image size="medium" src={imgSrc} />
-        <Item.Content>
-          <Item.Header>{name}</Item.Header>
-          <Item.Description>
-            <p>{description}</p>
-          </Item.Description>
-        </Item.Content>
-      </Item>
-    </Item.Group>
-  </Segment>
+  <Segment.Group>
+    <Segment raised secondary verticalalign="middle">
+      <Header size="huge" textAlign="center">
+        {name}
+      </Header>
+    </Segment>
+    <Segment raised>
+      <Image
+        rounded
+        style={{
+          margin: '0 auto',
+          minWidth: 300,
+          minHeight: 225,
+          maxWidth: 300,
+          maxHeight: 225
+        }}
+        size="medium"
+        src={imgSrc}
+      />
+      <Divider />
+      <Container
+        fluid
+        text
+        textAlign="justified"
+        style={{ minHeight: 300, maxHeight: 300, overflowY: 'auto' }}
+      >
+        <p>{description}</p>
+      </Container>
+    </Segment>
+  </Segment.Group>
 );
 
 class Municipalities extends Component {
   state = {
-    selectedMunicipality: null
+    selectedMunicipality: municipalities['HN.CR.SP']
   };
 
   onMunicipalityClick = municipality => {
@@ -30,30 +55,27 @@ class Municipalities extends Component {
   render() {
     const { selectedMunicipality } = this.state;
     return (
-      <div>
-        <h1>Municipios del Valle de Sula</h1>
-        <Grid stackable>
-          <Grid.Row columns={2}>
-            <Grid.Column textAlign="center">
-              <Segment basic>
-                <SulaValleyMap onMunicipalityClick={this.onMunicipalityClick} />
-                <em>
-                  *Mapa obtenido de <a href="https://gadm.org/">gadm.org</a>
-                </em>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              {selectedMunicipality && (
+      <Grid stackable verticalAlign="middle" style={{ height: 'inherit' }}>
+        <Grid.Row columns={2}>
+          <Grid.Column textAlign="center">
+            <SulaValleyMap onMunicipalityClick={this.onMunicipalityClick} />
+            <em>
+              *Mapa obtenido de <a href="https://gadm.org/">gadm.org</a>
+            </em>
+          </Grid.Column>
+          <Grid.Column>
+            {selectedMunicipality && (
+              <div style={{ padding: '0 20% 0 10%' }}>
                 <Municipality
                   name={selectedMunicipality.name}
                   description={selectedMunicipality.description}
                   imgSrc={selectedMunicipality.imgSrc}
                 />
-              )}
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </div>
+              </div>
+            )}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
   }
 }
