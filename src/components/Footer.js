@@ -6,7 +6,8 @@ const Footer = () => {
     <div className="footer">
       <div className="margin-info">
         <h4>
-          Página en desarrollo | Mesa regional de turismo del Valle de Sula
+          Página desarrollada por Andrés Rodríguez :D | Mesa regional de turismo
+          del Valle de Sula
         </h4>
       </div>
     </div>
