@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="margin-info">
-        <h4>&copy; Copyright 2017 | All rights reserved</h4>
+        <h4>
+          Página en desarrollo | Mesa regional de turismo del Valle de Sula
+        </h4>
       </div>
     </div>
   );
