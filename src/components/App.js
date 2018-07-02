@@ -40,7 +40,10 @@ class App extends Component {
               <Route exact path="/" component={Institutionality} />
               <Route path="/institucionalidad" component={Institutionality} />
               <Route path="/municipios" component={Municipalities} />
-              <Route path="/multimedia" component={Multimedia} />
+              <Route
+                path="/multimedia"
+                render={() => <Multimedia currentUser={currentUser} />}
+              />
               <Route path="/sostenibilidad" component={Sustainability} />
               <Route path="/festividades" component={Festivities} />
               <Route path="/actividades" component={Activities} />

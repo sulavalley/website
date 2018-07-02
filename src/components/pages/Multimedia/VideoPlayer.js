@@ -3,14 +3,12 @@ import { Embed } from 'semantic-ui-react';
 import '../../../css/pages/Multimedia.css';
 import logo from '../../../assets/images/logo.png';
 
-const VideoPlayer = props => (
+const VideoPlayer = () => (
   <div className="video-player">
     <Embed
-      url={props.url}
+      url="https://www.youtube.com/embed/videoseries?list=UUffHDdNhOCZFvt-f_D4kxFA"
       placeholder={logo}
-      iframe={{
-        allowFullScreen: true
-      }}
+      iframe={{ allowFullScreen: true }}
     />
   </div>
 );
