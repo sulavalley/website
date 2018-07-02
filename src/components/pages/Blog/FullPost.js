@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Disqus from 'disqus-react';
 import base from '../../../base';
 import unixToDate from './unixToDate';
+import { Item } from 'semantic-ui-react';
 
 const shortname = 'sulavalley';
 
@@ -23,7 +24,6 @@ class FullPost extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { title, author, timestamp, content } = this.state;
     const { id } = this.props.match.params;
     const disqusConfig = {
@@ -33,13 +33,22 @@ class FullPost extends Component {
     };
 
     return (
-      <div>
-        <h1>{title}</h1>
-        <h4>{author}</h4>
-        <h4>{unixToDate(timestamp)}</h4>
-        <p>{content}</p>
-        <Disqus.DiscussionEmbed shortname={shortname} config={disqusConfig} />
-      </div>
+      <Item.Group>
+        <Item>
+          <Item.Content>
+            <Item.Header>{title}</Item.Header>
+            <Item.Extra>
+              <span>{author}</span>
+              <span>{unixToDate(timestamp)}</span>
+            </Item.Extra>
+            <Item.Description>{content}</Item.Description>
+            <Disqus.DiscussionEmbed
+              shortname={shortname}
+              config={disqusConfig}
+            />
+          </Item.Content>
+        </Item>
+      </Item.Group>
     );
   }
 }

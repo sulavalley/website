@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Header,
-  Item,
-  Button,
-  Modal,
-  Form,
-  TextArea,
-  Input
-} from 'semantic-ui-react';
+import { Item, Button, Modal, Form, TextArea, Input } from 'semantic-ui-react';
 import base from '../../../base';
 import Post from './Post';
 import firebase from 'firebase';
@@ -61,7 +53,6 @@ class Blog extends Component {
     const { currentUser } = this.props;
     return (
       <div>
-        <Header>Blog</Header>
         {currentUser && (
           <Button
             primary
