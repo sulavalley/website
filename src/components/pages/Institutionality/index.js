@@ -10,7 +10,7 @@ const loremIpsum =
 
 const Institutionality = () => {
   return (
-    <Item.Group divided>
+    <Item.Group divided className="clearing">
       <Item>
         <Item.Image size="medium" src={image3} />
         <Item.Content>

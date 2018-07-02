@@ -56,9 +56,15 @@ class Municipalities extends Component {
     const { selectedMunicipality } = this.state;
     return (
       <Grid stackable verticalAlign="middle" style={{ height: 'inherit' }}>
+        <Grid.Row centered columns={1}>
+          <Divider hidden />
+          <Header as="h1">Municipios del Valle de Sula</Header>
+        </Grid.Row>
         <Grid.Row columns={2}>
           <Grid.Column textAlign="center">
             <SulaValleyMap onMunicipalityClick={this.onMunicipalityClick} />
+            <em>Haga clic en un municipio para ver su información.</em>
+            <br />
             <em>
               *Mapa obtenido de <a href="https://gadm.org/">gadm.org</a>
             </em>
