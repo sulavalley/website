@@ -1,5 +1,14 @@
 import React from 'react';
-import { Modal, Form, Input, Button, Image, Segment } from 'semantic-ui-react';
+import {
+  Modal,
+  Form,
+  Input,
+  Button,
+  Image,
+  Segment,
+  Loader,
+  Dimmer
+} from 'semantic-ui-react';
 import base from '../../../base';
 
 class ImageGallery extends React.Component {
@@ -9,17 +18,20 @@ class ImageGallery extends React.Component {
     newImage: {
       url: '',
       title: ''
-    }
+    },
+    loading: false
   };
 
   componentDidMount() {
-    base.fetch('images', {
-      context: this,
-      asArray: true,
-      then(data) {
-        this.setState({ images: data });
-      }
-    });
+    this.setState({ loading: true });
+    base
+      .fetch('images', {
+        context: this,
+        asArray: true
+      })
+      .then(data => this.setState({ images: data }))
+      .finally(() => this.setState({ loading: false }))
+      .catch(() => console.error('Something went terribly wrong'));
   }
 
   handleChange = event => {
@@ -40,10 +52,13 @@ class ImageGallery extends React.Component {
   };
 
   render() {
-    const { imageModalIsOpen, images } = this.state;
+    const { imageModalIsOpen, images, loading } = this.state;
     const { currentUser } = this.props;
     return (
-      <div>
+      <Segment basic>
+        <Dimmer active={loading} inverted>
+          <Loader size="large">Cargando</Loader>
+        </Dimmer>
         {currentUser && (
           <Button
             primary
@@ -65,7 +80,7 @@ class ImageGallery extends React.Component {
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
         />
-      </div>
+      </Segment>
     );
   }
 }

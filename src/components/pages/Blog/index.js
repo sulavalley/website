@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import { Item, Button, Modal, Form, TextArea, Input } from 'semantic-ui-react';
+import {
+  Item,
+  Button,
+  Modal,
+  Form,
+  TextArea,
+  Input,
+  Segment,
+  Dimmer,
+  Loader
+} from 'semantic-ui-react';
 import base from '../../../base';
 import Post from './Post';
 import firebase from 'firebase';
@@ -9,16 +19,19 @@ class Blog extends Component {
     posts: {},
     postModalIsOpen: false,
     postTitle: '',
-    postContent: ''
+    postContent: '',
+    loading: false
   };
 
   componentDidMount() {
-    base.fetch('posts', {
-      context: this,
-      then(data) {
-        this.setState({ posts: data });
-      }
-    });
+    this.setState({ loading: true });
+    base
+      .fetch('posts', {
+        context: this
+      })
+      .then(data => this.setState({ posts: data }))
+      .finally(() => this.setState({ loading: false }))
+      .catch(() => console.error('Something went terribly wrong'));
   }
 
   onPostTitleChange = (evt, data) => {
@@ -49,10 +62,13 @@ class Blog extends Component {
   };
 
   render() {
-    const { posts, postModalIsOpen } = this.state;
+    const { posts, postModalIsOpen, loading } = this.state;
     const { currentUser } = this.props;
     return (
-      <div>
+      <Segment basic>
+        <Dimmer active={loading} inverted>
+          <Loader size="large">Cargando</Loader>
+        </Dimmer>
         {currentUser && (
           <Button
             primary
@@ -73,7 +89,7 @@ class Blog extends Component {
           onTitleChange={this.onPostTitleChange}
           onContentChange={this.onPostContentChange}
         />
-      </div>
+      </Segment>
     );
   }
 }

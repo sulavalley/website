@@ -6,7 +6,10 @@ import {
   Button,
   TextArea,
   Item,
-  Divider
+  Divider,
+  Dimmer,
+  Loader,
+  Segment
 } from 'semantic-ui-react';
 import Project from './Project';
 import base from '../../../base';
@@ -19,17 +22,20 @@ class Sustainability extends Component {
       name: '',
       url: '',
       description: ''
-    }
+    },
+    loading: false
   };
 
   componentDidMount() {
-    base.fetch('projects', {
-      context: this,
-      asArray: true,
-      then(data) {
-        this.setState({ projects: data });
-      }
-    });
+    this.setState({ loading: true });
+    base
+      .fetch('projects', {
+        context: this,
+        asArray: true
+      })
+      .then(data => this.setState({ projects: data }))
+      .finally(() => this.setState({ loading: false }))
+      .catch(() => console.error('Something went terribly wrong'));
   }
 
   handleChange = event => {
@@ -50,10 +56,13 @@ class Sustainability extends Component {
   };
 
   render() {
-    const { projectModalIsOpen, projects } = this.state;
+    const { projectModalIsOpen, projects, loading } = this.state;
     const { currentUser } = this.props;
     return (
-      <div>
+      <Segment basic>
+        <Dimmer active={loading} inverted>
+          <Loader size="large">Cargando</Loader>
+        </Dimmer>
         {currentUser && (
           <Button
             primary
@@ -78,7 +87,7 @@ class Sustainability extends Component {
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
         />
-      </div>
+      </Segment>
     );
   }
 }
