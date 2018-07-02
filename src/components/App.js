@@ -30,11 +30,11 @@ class App extends Component {
   render() {
     const { currentUser } = this.state;
     return (
-      <div>
-        <div className="app-header">
-          <Header currentUser={currentUser} />
-        </div>
-        <div className="app-page-body">
+      <div
+        style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}
+      >
+        <Header currentUser={currentUser} />
+        <div style={{ flex: 1 }}>
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Institutionality} />
@@ -59,5 +59,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

@@ -1,5 +1,16 @@
 img {
   width: 10%;
-  height: 10%;
   margin-left: 2%;
+}
+
+@media only screen and (min-device-width: 422px) and (max-device-width: 976px) {
+  img {
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 421px) {
+  img {
+    width: 40%;
+  }
 }
