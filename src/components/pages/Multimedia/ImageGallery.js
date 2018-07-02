@@ -45,7 +45,10 @@ class ImageGallery extends React.Component {
     return (
       <div>
         {currentUser && (
-          <Button onClick={() => this.setState({ imageModalIsOpen: true })}>
+          <Button
+            primary
+            onClick={() => this.setState({ imageModalIsOpen: true })}
+          >
             Nueva publicación
           </Button>
         )}
@@ -88,7 +91,9 @@ const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
             placeholder="Ingrese un enlace a la imagen"
           />
         </Form.Field>
-        <Button type="submit">Publicar</Button>
+        <Button positive type="submit">
+          Publicar
+        </Button>
       </Form>
     </Modal.Content>
   </Modal>

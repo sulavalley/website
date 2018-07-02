@@ -63,7 +63,10 @@ class Blog extends Component {
       <div>
         <Header>Blog</Header>
         {currentUser && (
-          <Button onClick={() => this.setState({ postModalIsOpen: true })}>
+          <Button
+            primary
+            onClick={() => this.setState({ postModalIsOpen: true })}
+          >
             Nueva publicación
           </Button>
         )}
@@ -107,7 +110,9 @@ const PostModal = ({
             placeholder="Ingrese el contenido de la publicación."
           />
         </Form.Field>
-        <Button type="submit">Publicar</Button>
+        <Button positive type="submit">
+          Publicar
+        </Button>
       </Form>
     </Modal.Content>
   </Modal>
