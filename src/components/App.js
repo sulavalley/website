@@ -44,7 +44,10 @@ class App extends Component {
                 path="/multimedia"
                 render={() => <Multimedia currentUser={currentUser} />}
               />
-              <Route path="/sostenibilidad" component={Sustainability} />
+              <Route
+                path="/sostenibilidad"
+                render={() => <Sustainability currentUser={currentUser} />}
+              />
               <Route path="/festividades" component={Festivities} />
               <Route path="/actividades" component={Activities} />
               <Route
