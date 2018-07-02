@@ -23,10 +23,10 @@ class Header extends Component {
           <a className="item" href="/sostenibilidad">
             Sostenibilidad
           </a>
-          <a className="item" href="/festividades">
+          <a style={{ display: 'none' }} className="item" href="/festividades">
             Festividades
           </a>
-          <a className="item" href="/actividades">
+          <a style={{ display: 'none' }} className="item" href="/actividades">
             Actividades
           </a>
           <a className="item" href="/blog">
