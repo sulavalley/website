@@ -1,5 +1,4 @@
 import React from 'react';
-import { string } from 'prop-types';
 import { Card, Image } from 'semantic-ui-react';
 
 class Project extends React.Component {
@@ -27,11 +26,5 @@ class Project extends React.Component {
     );
   }
 }
-
-Project.propTypes = {
-  name: string,
-  url: string,
-  description: string
-};
 
 export default Project;

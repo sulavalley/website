@@ -1,5 +1,4 @@
 import React from 'react';
-import { object } from 'prop-types';
 import base from '../../../base';
 import { Button, Form } from 'semantic-ui-react';
 
@@ -76,9 +75,5 @@ class NewProject extends React.Component {
     );
   }
 }
-
-NewProject.propTypes = {
-  projectsRef: object
-};
 
 export default NewProject;

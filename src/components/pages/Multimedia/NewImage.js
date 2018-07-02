@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import base from '../../../base';
 import { Button, Form } from 'semantic-ui-react';
 
@@ -66,10 +65,5 @@ class NewImage extends React.Component {
     );
   }
 }
-
-NewImage.propTypes = {
-  caption: propTypes.string.isRequired,
-  src: propTypes.string.isRequired
-};
 
 export default NewImage;
