@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Segment, Dimmer, Loader } from 'semantic-ui-react';
 import Header from './Header';
 import Footer from './Footer';
 import Activities from './pages/Activities';
@@ -18,20 +19,36 @@ const FourOhFour = () => <h1>404</h1>;
 
 class App extends Component {
   state = {
-    currentUser: null
+    currentUser: null,
+    authFinished: false
   };
 
   componentDidMount() {
     auth.onAuthStateChanged(currentUser => {
-      this.setState({ currentUser });
+      this.setState({ currentUser, authFinished: true });
     });
   }
 
   render() {
-    const { currentUser } = this.state;
+    const { currentUser, authFinished } = this.state;
+
+    if (!authFinished) {
+      return (
+        <Segment padded="very" vertical basic size="huge">
+          <Dimmer active inverted>
+            <Loader size="large">Cargando</Loader>
+          </Dimmer>
+        </Segment>
+      );
+    }
+
     return (
       <div
-        style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}
+        style={{
+          display: 'flex',
+          minHeight: '100vh',
+          flexDirection: 'column'
+        }}
       >
         <Header currentUser={currentUser} />
         <div style={{ flex: 1 }}>
