@@ -113,7 +113,12 @@ const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
             placeholder="Ingrese un enlace a la imagen"
           />
         </Form.Field>
-        <Button positive type="submit">
+        <Button
+          style={{ marginBottom: 15 }}
+          floated="right"
+          positive
+          type="submit"
+        >
           Publicar
         </Button>
       </Form>

@@ -75,6 +75,7 @@ class Sustainability extends Component {
         <Item.Group divided>
           {projects.map((project, i) => (
             <Project
+              key={i}
               name={project.name}
               url={project.url}
               description={project.description}
@@ -121,7 +122,12 @@ const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
             placeholder="Ingrese una descripción"
           />
         </Form.Field>
-        <Button positive type="submit">
+        <Button
+          style={{ marginBottom: 15 }}
+          floated="right"
+          positive
+          type="submit"
+        >
           Publicar
         </Button>
       </Form>
