@@ -41,19 +41,19 @@ class SulaValleyMap extends Component {
                     style={{
                       default: {
                         fill: '#ECEFF1',
-                        stroke: '#016936',
+                        stroke: '#2185d0',
                         strokeWidth: 0.75,
                         outline: 'none'
                       },
                       hover: {
-                        fill: '#016936',
-                        stroke: '#016936',
+                        fill: '#2185d0',
+                        stroke: '#2185d0',
                         strokeWidth: 0.75,
                         outline: 'none'
                       },
                       pressed: {
-                        fill: '#016936',
-                        stroke: '#016936',
+                        fill: '#2185d0',
+                        stroke: '#2185d0',
                         strokeWidth: 0.75,
                         outline: 'none'
                       }

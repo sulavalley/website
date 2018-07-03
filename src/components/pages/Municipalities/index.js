@@ -12,8 +12,12 @@ import municipalities from '../../../assets/municipalities.json';
 
 const Municipality = ({ name, description, imgSrc }) => (
   <Segment.Group>
-    <Segment raised secondary verticalalign="middle">
-      <Header size="huge" textAlign="center">
+    <Segment
+      style={{ backgroundColor: '#2185d0' }}
+      raised
+      verticalalign="middle"
+    >
+      <Header style={{ color: 'white' }} size="huge" textAlign="center">
         {name}
       </Header>
     </Segment>
