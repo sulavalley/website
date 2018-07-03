@@ -7,7 +7,9 @@ import {
   Image,
   Segment,
   Loader,
-  Dimmer
+  Dimmer,
+  Container,
+  Divider
 } from 'semantic-ui-react';
 import base from '../../../base';
 
@@ -56,6 +58,11 @@ class ImageGallery extends React.Component {
     const { currentUser } = this.props;
     return (
       <Segment basic>
+        <Container text textAlign="justified" fluid>
+          En esta sección encontraras imágenes sobre las actividades realizadas
+          por la MRTVS.
+        </Container>
+        <Divider />
         <Dimmer active={loading} inverted>
           <Loader size="large">Cargando</Loader>
         </Dimmer>
