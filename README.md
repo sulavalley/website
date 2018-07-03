@@ -56,5 +56,5 @@ yarn start
 ```
 
 ```
-
+npm start
 ```

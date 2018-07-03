@@ -26,7 +26,7 @@ class Post extends React.Component {
             <Link
               to={{
                 pathname: `/blog/${id}`,
-                state: { title, author, timestamp, content }
+                state: { title, author, timestamp, content, imageURL }
               }}
             >
               {title}

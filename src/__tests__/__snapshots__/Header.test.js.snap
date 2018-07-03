@@ -4,71 +4,61 @@ exports[`renders correctly 1`] = `
 <div
   className="ui stackable menu"
 >
-  <img
-    alt="logo"
-    src="logo.png"
-  />
   <div
-    className="right menu"
+    className="left item"
+    onClick={[Function]}
   >
-    <a
-      className="item"
-      href="/institucionalidad"
-    >
-      Institucionalidad
-    </a>
-    <a
-      className="item"
-      href="/municipios"
-    >
-      Municipios
-    </a>
-    <a
-      className="item"
-      href="/multimedia"
-    >
-      Multimedia
-    </a>
-    <a
-      className="item"
-      href="/sostenibilidad"
-    >
-      Sostenibilidad
-    </a>
-    <a
-      className="item"
-      href="/festividades"
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-    >
-      Festividades
-    </a>
-    <a
-      className="item"
-      href="/actividades"
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-    >
-      Actividades
-    </a>
-    <a
-      className="item"
-      href="/blog"
-    >
-      Blog
-    </a>
-    <a
-      className="item"
-      onClick={[Function]}
-    >
-      Iniciar Sesión
-    </a>
+    <img
+      className="ui small image"
+      src="logo.png"
+    />
   </div>
+  <div
+    className="item"
+    onClick={[Function]}
+  >
+    
+  </div>
+  <a
+    className="item"
+    href="/Institucionalidad"
+    onClick={[Function]}
+  >
+    Institucionalidad
+  </a>
+  <a
+    className="item"
+    href="/Municipios"
+    onClick={[Function]}
+  >
+    Municipios
+  </a>
+  <a
+    className="item"
+    href="/Multimedia"
+    onClick={[Function]}
+  >
+    Multimedia
+  </a>
+  <a
+    className="item"
+    href="/Sostenibilidad"
+    onClick={[Function]}
+  >
+    Sostenibilidad
+  </a>
+  <a
+    className="item"
+    href="/Blog"
+    onClick={[Function]}
+  >
+    Blog
+  </a>
+  <a
+    className="item"
+    onClick={[Function]}
+  >
+    Iniciar Sesión
+  </a>
 </div>
 `;
