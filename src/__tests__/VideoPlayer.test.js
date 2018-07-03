@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import VideoPlayer from '../components/VideoPlayer';
+import VideoPlayer from '../components/pages/Multimedia/VideoPlayer';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
