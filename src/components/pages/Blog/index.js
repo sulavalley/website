@@ -18,9 +18,8 @@ class Blog extends Component {
   state = {
     posts: {},
     postModalIsOpen: false,
-    postTitle: '',
-    postContent: '',
-    loading: false
+    loading: false,
+    newPost: { title: '', imageURL: '', content: '' }
   };
 
   componentDidMount() {
@@ -34,27 +33,29 @@ class Blog extends Component {
       .catch(() => console.error('Something went terribly wrong'));
   }
 
-  onPostTitleChange = (evt, data) => {
-    this.setState({ postTitle: data.value });
+  handleChange = event => {
+    const { newPost } = this.state;
+    this.setState({
+      newPost: { ...newPost, [event.target.name]: event.target.value }
+    });
   };
 
-  onPostContentChange = (evt, data) => {
-    this.setState({ postContent: data.value });
-  };
-
-  onNewPost = evt => {
+  handleNewPost = evt => {
     evt.preventDefault();
     this.addPost();
   };
 
   addPost = () => {
+    const { newPost } = this.state;
+    const { currentUser } = this.props;
     base
       .push('posts', {
         data: {
-          title: this.state.postTitle,
-          content: this.state.postContent,
+          title: newPost.title,
+          imageURL: newPost.imageURL,
+          content: newPost.content,
           timestamp: firebase.database.ServerValue.TIMESTAMP,
-          author: this.props.currentUser.displayName
+          author: currentUser.displayName
         }
       })
       .then(() => this.setState({ postModalIsOpen: false }))
@@ -85,36 +86,38 @@ class Blog extends Component {
         <PostModal
           open={postModalIsOpen}
           onClose={() => this.setState({ postModalIsOpen: false })}
-          onSubmit={this.onNewPost}
-          onTitleChange={this.onPostTitleChange}
-          onContentChange={this.onPostContentChange}
+          onSubmit={this.handleNewPost}
+          onChange={this.handleChange}
         />
       </Segment>
     );
   }
 }
 
-const PostModal = ({
-  open,
-  onClose,
-  onSubmit,
-  onTitleChange,
-  onContentChange
-}) => (
+const PostModal = ({ open, onClose, onSubmit, onChange }) => (
   <Modal closeIcon open={open} onClose={onClose}>
     <Modal.Header>Nueva publicación</Modal.Header>
     <Modal.Content>
       <Form onSubmit={onSubmit}>
         <Form.Field>
           <label>Título</label>
-          <Input onChange={onTitleChange} placeholder="Título" />
+          <Input onChange={onChange} placeholder="Título" name="title" />
+        </Form.Field>
+        <Form.Field>
+          <label>URL de imagen</label>
+          <Input
+            onChange={onChange}
+            name="imageURL"
+            placeholder="Ingrese un enlace a la imagen"
+          />
         </Form.Field>
         <Form.Field>
           <label>Contenido</label>
           <TextArea
             rows={8}
-            onChange={onContentChange}
+            onChange={onChange}
             placeholder="Ingrese el contenido de la publicación."
+            name="content"
           />
         </Form.Field>
         <Button
