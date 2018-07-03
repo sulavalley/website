@@ -2,133 +2,133 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="ui items"
+  className="ui container grid"
 >
   <div
-    align="center"
-    className="item"
+    className="row"
   >
     <div
-      className="content"
+      className="ui middle aligned grid"
     >
-      <h1>
-        Misión
-      </h1>
       <div
-        className="description"
-        style={
-          Object {
-            "maxWidth": "50%",
-          }
-        }
+        className="four wide column"
       >
-        <p>
-          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
-        </p>
+        <div
+          className="image-container"
+        >
+          <img
+            className="ui medium rounded image grid-image"
+            src="image3.jpg"
+          />
+        </div>
       </div>
-    </div>
-    <div
-      className="image"
-    >
-      <img
-        className="ui image"
-        src="image3.jpg"
-      />
-    </div>
-  </div>
-  <div
-    className="item"
-  >
-    <div
-      className="image"
-    >
-      <img
-        className="ui image"
-        src="image5.jpg"
-      />
-    </div>
-    <div
-      align="center"
-      className="content"
-    >
-      <h1>
-        Visión
-      </h1>
       <div
-        className="description"
-        style={
-          Object {
-            "maxWidth": "50%",
-          }
-        }
+        className="twelve wide column"
       >
+        <div
+          className="ui huge center aligned header"
+        >
+          Misión
+        </div>
         <p>
-          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
     </div>
   </div>
   <div
-    className="item"
+    className="row"
   >
     <div
-      align="center"
-      className="content"
+      className="ui middle aligned grid"
     >
-      <h1>
-        Objetivos
-      </h1>
       <div
-        className="description"
-        style={
-          Object {
-            "maxWidth": "50%",
-          }
-        }
+        className="twelve wide column"
       >
+        <div
+          className="ui huge center aligned header"
+        >
+          Visión
+        </div>
         <p>
-          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-    </div>
-    <div
-      className="image"
-    >
-      <img
-        className="ui image"
-        src="image22.jpg"
-      />
+      <div
+        className="four wide column"
+      >
+        <div
+          className="image-container"
+        >
+          <img
+            className="ui medium rounded image grid-image"
+            src="image5.jpg"
+          />
+        </div>
+      </div>
     </div>
   </div>
   <div
-    className="item"
+    className="row"
   >
     <div
-      className="image"
+      className="ui middle aligned grid"
     >
-      <img
-        className="ui image"
-        src="image28.jpg"
-      />
-    </div>
-    <div
-      align="center"
-      className="content"
-    >
-      <h1>
-        Alcance
-      </h1>
       <div
-        className="description"
-        style={
-          Object {
-            "maxWidth": "50%",
-          }
-        }
+        className="four wide column"
       >
+        <div
+          className="image-container"
+        >
+          <img
+            className="ui medium rounded image grid-image"
+            src="image22.jpg"
+          />
+        </div>
+      </div>
+      <div
+        className="twelve wide column"
+      >
+        <div
+          className="ui huge center aligned header"
+        >
+          Objetivos
+        </div>
         <p>
-          Nulla aliquet elit non nulla pellentesque placerat sed malesuada metus. Fusce ac odio et augue convallis consequat. Fusce ullamcorper nulla vitae dui molestie tristique cursus suscipit massa. Suspendisse pulvinar quam sed orci bibendum vestibulum. Curabitur libero neque, interdum ornare mi et, auctor hendrerit lacus. Aliquam erat volutpat. In sollicitudin convallis hendrerit. In vel sodales diam, vitae sagittis massa. Nunc vulputate faucibus felis, efficitur semper turpis imperdiet quis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="ui middle aligned grid"
+    >
+      <div
+        className="twelve wide column"
+      >
+        <div
+          className="ui huge center aligned header"
+        >
+          Alcance
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div
+        className="four wide column"
+      >
+        <div
+          className="image-container"
+        >
+          <img
+            className="ui medium rounded image grid-image"
+            src="image28.jpg"
+          />
+        </div>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="ui header-size menu"
+  className="ui stackable menu"
 >
   <img
     alt="logo"
@@ -38,12 +38,22 @@ exports[`renders correctly 1`] = `
     <a
       className="item"
       href="/festividades"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
     >
       Festividades
     </a>
     <a
       className="item"
       href="/actividades"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
     >
       Actividades
     </a>
