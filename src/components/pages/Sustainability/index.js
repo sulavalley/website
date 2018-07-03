@@ -26,7 +26,7 @@ class Sustainability extends Component {
     loading: false
   };
 
-  componentDidMount() {
+  loadData = () => {
     this.setState({ loading: true });
     base
       .fetch('projects', {
@@ -36,6 +36,10 @@ class Sustainability extends Component {
       .then(data => this.setState({ projects: data }))
       .finally(() => this.setState({ loading: false }))
       .catch(() => console.error('Something went terribly wrong'));
+  };
+
+  componentDidMount() {
+    this.loadData();
   }
 
   handleChange = event => {
@@ -52,6 +56,7 @@ class Sustainability extends Component {
         data: { ...newProject }
       })
       .then(() => this.setState({ projectModalIsOpen: false }))
+      .then(() => this.loadData())
       .catch(() => console.error('Something went terribly wrong'));
   };
 
