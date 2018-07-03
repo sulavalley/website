@@ -68,7 +68,7 @@ class Sustainability extends Component {
             primary
             onClick={() => this.setState({ projectModalIsOpen: true })}
           >
-            Nueva publicación
+            Nuevo proyecto
           </Button>
         )}
         <Divider hidden />
@@ -98,7 +98,7 @@ const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
     <Modal.Content>
       <Form onSubmit={onSubmit}>
         <Form.Field>
-          <label>Nombre del proyecto</label>
+          <label>Nombre</label>
           <Input
             onChange={onChange}
             name="name"
@@ -106,7 +106,7 @@ const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
           />
         </Form.Field>
         <Form.Field>
-          <label>Imagen del proyecto</label>
+          <label>Imagen</label>
           <Input
             onChange={onChange}
             name="url"
@@ -114,7 +114,7 @@ const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
           />
         </Form.Field>
         <Form.Field>
-          <label>Descripción del proyecto</label>
+          <label>Descripción</label>
           <TextArea
             onChange={onChange}
             name="description"

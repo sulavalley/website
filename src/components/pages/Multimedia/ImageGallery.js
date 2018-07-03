@@ -64,7 +64,7 @@ class ImageGallery extends React.Component {
             primary
             onClick={() => this.setState({ imageModalIsOpen: true })}
           >
-            Nueva publicación
+            Nueva imagen
           </Button>
         )}
         <Segment basic>
@@ -87,7 +87,7 @@ class ImageGallery extends React.Component {
 
 const ImageModal = ({ open, onClose, onSubmit, onChange }) => (
   <Modal closeIcon open={open} onClose={onClose}>
-    <Modal.Header>Nueva publicación</Modal.Header>
+    <Modal.Header>Nueva imagen</Modal.Header>
     <Modal.Content>
       <Form onSubmit={onSubmit}>
         <Form.Field>
