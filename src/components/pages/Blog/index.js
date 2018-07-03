@@ -22,7 +22,7 @@ class Blog extends Component {
     newPost: { title: '', imageURL: '', content: '' }
   };
 
-  componentDidMount() {
+  loadData = () => {
     this.setState({ loading: true });
     base
       .fetch('posts', {
@@ -31,6 +31,10 @@ class Blog extends Component {
       .then(data => this.setState({ posts: data }))
       .finally(() => this.setState({ loading: false }))
       .catch(() => console.error('Something went terribly wrong'));
+  };
+
+  componentDidMount() {
+    this.loadData();
   }
 
   handleChange = event => {
@@ -59,6 +63,7 @@ class Blog extends Component {
         }
       })
       .then(() => this.setState({ postModalIsOpen: false }))
+      .then(() => this.loadData())
       .catch(() => console.error('Something went terribly wrong'));
   };
 

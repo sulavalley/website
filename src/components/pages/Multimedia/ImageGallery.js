@@ -24,7 +24,7 @@ class ImageGallery extends React.Component {
     loading: false
   };
 
-  componentDidMount() {
+  loadData = () => {
     this.setState({ loading: true });
     base
       .fetch('images', {
@@ -34,6 +34,10 @@ class ImageGallery extends React.Component {
       .then(data => this.setState({ images: data }))
       .finally(() => this.setState({ loading: false }))
       .catch(() => console.error('Something went terribly wrong'));
+  };
+
+  componentDidMount() {
+    this.loadData();
   }
 
   handleChange = event => {
@@ -50,6 +54,7 @@ class ImageGallery extends React.Component {
         data: { ...newImage }
       })
       .then(() => this.setState({ imageModalIsOpen: false }))
+      .then(() => this.loadData())
       .catch(() => console.error('Something went terribly wrong'));
   };
 
