@@ -8,7 +8,7 @@ class Header extends Component {
   render() {
     const { currentUser } = this.props;
     return (
-      <div className="ui header-size menu">
+      <div className="ui stackable menu">
         <img src={logo} alt="logo" />
         <div className="right menu">
           <a className="item" href="/institucionalidad">
@@ -23,10 +23,10 @@ class Header extends Component {
           <a className="item" href="/sostenibilidad">
             Sostenibilidad
           </a>
-          <a className="item" href="/festividades">
+          <a style={{ display: 'none' }} className="item" href="/festividades">
             Festividades
           </a>
-          <a className="item" href="/actividades">
+          <a style={{ display: 'none' }} className="item" href="/actividades">
             Actividades
           </a>
           <a className="item" href="/blog">

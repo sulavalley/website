@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import {
-  Header,
   Item,
   Button,
   Modal,
   Form,
   TextArea,
-  Input
+  Input,
+  Segment,
+  Dimmer,
+  Loader
 } from 'semantic-ui-react';
 import base from '../../../base';
 import Post from './Post';
@@ -16,40 +18,44 @@ class Blog extends Component {
   state = {
     posts: {},
     postModalIsOpen: false,
-    postTitle: '',
-    postContent: ''
+    loading: false,
+    newPost: { title: '', imageURL: '', content: '' }
   };
 
   componentDidMount() {
-    base.fetch('posts', {
-      context: this,
-      then(data) {
-        this.setState({ posts: data });
-      }
-    });
+    this.setState({ loading: true });
+    base
+      .fetch('posts', {
+        context: this
+      })
+      .then(data => this.setState({ posts: data }))
+      .finally(() => this.setState({ loading: false }))
+      .catch(() => console.error('Something went terribly wrong'));
   }
 
-  onPostTitleChange = (evt, data) => {
-    this.setState({ postTitle: data.value });
+  handleChange = event => {
+    const { newPost } = this.state;
+    this.setState({
+      newPost: { ...newPost, [event.target.name]: event.target.value }
+    });
   };
 
-  onPostContentChange = (evt, data) => {
-    this.setState({ postContent: data.value });
-  };
-
-  onNewPost = evt => {
+  handleNewPost = evt => {
     evt.preventDefault();
     this.addPost();
   };
 
   addPost = () => {
+    const { newPost } = this.state;
+    const { currentUser } = this.props;
     base
       .push('posts', {
         data: {
-          title: this.state.postTitle,
-          content: this.state.postContent,
+          title: newPost.title,
+          imageURL: newPost.imageURL,
+          content: newPost.content,
           timestamp: firebase.database.ServerValue.TIMESTAMP,
-          author: this.props.currentUser.displayName
+          author: currentUser.displayName
         }
       })
       .then(() => this.setState({ postModalIsOpen: false }))
@@ -57,13 +63,18 @@ class Blog extends Component {
   };
 
   render() {
-    const { posts, postModalIsOpen } = this.state;
+    const { posts, postModalIsOpen, loading } = this.state;
     const { currentUser } = this.props;
     return (
-      <div>
-        <Header>Blog</Header>
+      <Segment basic>
+        <Dimmer active={loading} inverted>
+          <Loader size="large">Cargando</Loader>
+        </Dimmer>
         {currentUser && (
-          <Button onClick={() => this.setState({ postModalIsOpen: true })}>
+          <Button
+            primary
+            onClick={() => this.setState({ postModalIsOpen: true })}
+          >
             Nueva publicación
           </Button>
         )}
@@ -75,39 +86,48 @@ class Blog extends Component {
         <PostModal
           open={postModalIsOpen}
           onClose={() => this.setState({ postModalIsOpen: false })}
-          onSubmit={this.onNewPost}
-          onTitleChange={this.onPostTitleChange}
-          onContentChange={this.onPostContentChange}
+          onSubmit={this.handleNewPost}
+          onChange={this.handleChange}
         />
-      </div>
+      </Segment>
     );
   }
 }
 
-const PostModal = ({
-  open,
-  onClose,
-  onSubmit,
-  onTitleChange,
-  onContentChange
-}) => (
+const PostModal = ({ open, onClose, onSubmit, onChange }) => (
   <Modal closeIcon open={open} onClose={onClose}>
     <Modal.Header>Nueva publicación</Modal.Header>
     <Modal.Content>
       <Form onSubmit={onSubmit}>
         <Form.Field>
           <label>Título</label>
-          <Input onChange={onTitleChange} placeholder="Título" />
+          <Input onChange={onChange} placeholder="Título" name="title" />
+        </Form.Field>
+        <Form.Field>
+          <label>URL de imagen</label>
+          <Input
+            onChange={onChange}
+            name="imageURL"
+            placeholder="Ingrese un enlace a la imagen"
+          />
         </Form.Field>
         <Form.Field>
           <label>Contenido</label>
           <TextArea
             rows={8}
-            onChange={onContentChange}
+            onChange={onChange}
             placeholder="Ingrese el contenido de la publicación."
+            name="content"
           />
         </Form.Field>
-        <Button type="submit">Publicar</Button>
+        <Button
+          style={{ marginBottom: 15 }}
+          floated="right"
+          positive
+          type="submit"
+        >
+          Publicar
+        </Button>
       </Form>
     </Modal.Content>
   </Modal>
