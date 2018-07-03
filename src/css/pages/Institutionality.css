@@ -1,0 +1,12 @@
+img.grid-image {
+  max-width: 128px;
+  max-height: 198px;
+  min-width: 128px;
+  min-height: 198px;
+}
+
+@media only screen and (max-width: 990px) {
+  .image-container {
+    display: none;
+  }
+}

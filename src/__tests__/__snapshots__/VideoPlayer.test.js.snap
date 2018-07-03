@@ -5,6 +5,14 @@ exports[`renders correctly 1`] = `
   className="video-player"
 >
   <div
+    className="ui text fluid justified container"
+  >
+    En esta sección encontraras videos sobre las actividades realizadas por la MRTVS.
+  </div>
+  <div
+    className="ui divider"
+  />
+  <div
     className="ui embed"
     onClick={[Function]}
   >

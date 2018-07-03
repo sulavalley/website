@@ -1,77 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  className="ui huge basic vertical very padded segment"
+>
   <div
-    className="app-header"
+    className="ui active transition visible inverted dimmer"
+    onClick={[Function]}
   >
     <div
-      className="ui header-size menu"
+      className="content"
     >
-      <img
-        alt="logo"
-        src="logo.png"
-      />
       <div
-        className="right menu"
+        className="ui large text loader"
       >
-        <a
-          className="item"
-          href="/institucionalidad"
-        >
-          Institucionalidad
-        </a>
-        <a
-          className="item"
-          href="/municipios"
-        >
-          Municipios
-        </a>
-        <a
-          className="item"
-          href="/multimedia"
-        >
-          Multimedia
-        </a>
-        <a
-          className="item"
-          href="/sostenibilidad"
-        >
-          Sostenibilidad
-        </a>
-        <a
-          className="item"
-          href="/festividades"
-        >
-          Festividades
-        </a>
-        <a
-          className="item"
-          href="/actividades"
-        >
-          Actividades
-        </a>
-        <a
-          className="item"
-          href="/blog"
-        >
-          Blog
-        </a>
+        Cargando
       </div>
-    </div>
-  </div>
-  <div
-    className="app-page-body"
-  />
-  <div
-    className="footer"
-  >
-    <div
-      className="margin-info"
-    >
-      <h4>
-        © Copyright 2017 | All rights reserved
-      </h4>
     </div>
   </div>
 </div>
