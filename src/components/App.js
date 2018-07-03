@@ -51,7 +51,7 @@ class App extends Component {
         }}
       >
         <Header currentUser={currentUser} />
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, padding: '1em 2.5em 2.5em 2.5em' }}>
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Institutionality} />
